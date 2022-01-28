@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.divTop{
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    background-color: rgb(17, 53, 172);
+    padding: 0px 10px 0px 10px;
+}
+.divBd{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divCpf{
+    width: 20%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
