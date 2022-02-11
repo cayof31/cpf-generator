@@ -1,13 +1,12 @@
-
-
 //O começo
 let totalDIG1 = 0;
 let totalDIG2 = 0;
 const button = document.querySelector(".btnCPF");
 const input = document.querySelector("#qtd-cpf").value;
-const divBD = document.querySelector('.divBD');
+const divBD = document.querySelector(".divBD");
+
 function gerCPF() {
-    //gera um numero aleatório entre 0 e 999999999
+  //gera um numero aleatório entre 0 e 999999999
   const preCPF = Math.floor(Math.random() * 999999999 + 1);
   //quebra o numero ex: 9,9,9...
   const validaARRAY = String(preCPF).padStart(9, "0").split("");
@@ -16,12 +15,11 @@ function gerCPF() {
     return parseInt(item);
   });
   let a = 10;
-    //Multiplica cada item do array por 10--(ex:[0]*10,[1]*9...)
+  //Multiplica cada item do array por 10--(ex:[0]*10,[1]*9...)
   const digARRAY = intARRAY.map((item) => {
     let num = item * a;
     a--;
     totalDIG1 += num;
-   
   });
   //define o primeiro digito de validação ( resto da divisão arredondada < 2 = 0 ) || (11 - (o resto da divisao arredondada))
   let restoDivisaoDGT1 = totalDIG1 % 11;
@@ -45,32 +43,33 @@ function gerCPF() {
   } else {
     intARRAY[10] = 11 - restoDivisaoDGT2;
   }
+  const div = document.createElement("div");
   const elemento = document.createElement("p");
-
-  elemento.textContent = intARRAY.join("").replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4"); 
-
-  console.log(divBD);
-
-  divBD.appendChild(elemento);
   const btn = document.createElement("button");
-  divBD.appendChild(btn);
-  btn.onclick = function() {
+  div.classList.add("divc");
+  elemento.textContent = intARRAY
+    .join("")
+    .replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
+
+  divBD.appendChild(div);//coloca a div dentro da divBD(node-nodo)
+  div.appendChild(elemento);
+  div.appendChild(btn);
+
+  btn.onclick = function () {
     elemento.parentNode.removeChild(elemento);
     btn.parentNode.removeChild(btn);
-  };
+    div.parentNode.removeChild(div);
+  };  
 }
 
-button.onclick = function() {
+button.onclick = function () {
   multiCPF(input);
-
-   
 };
 
 function multiCPF(item) {
   let i = 0;
   while (i < item) {
     gerCPF();
-    i++
+    i++;
   }
 }
-
