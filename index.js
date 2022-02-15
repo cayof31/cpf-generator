@@ -1,3 +1,4 @@
+
 //O começo
 let totalDIG1 = 0;
 let totalDIG2 = 0;
@@ -46,6 +47,11 @@ function gerCPF() {
   const div = document.createElement("div");
   const elemento = document.createElement("p");
   const btn = document.createElement("button");
+  const img = document.createElement("img");
+  img.src = "imagem.svg";
+
+  btn.appendChild(img);
+  
   div.classList.add("divc");
   elemento.textContent = intARRAY
     .join("")
