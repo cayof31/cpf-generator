@@ -1,2 +1,1 @@
 ## cpf-generator
--[x]
