@@ -13,8 +13,14 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  color:rgb(205, 220, 243);
   background-color: rgb(17, 53, 172);
-  padding: 0px 10px 0px 10px;
+  padding: 0px 30px 0px 10px;
+}
+.divTop p {
+  color:rgb(205, 220, 243);
+
 }
 .divCPF {
   width: 100%;
@@ -23,6 +29,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font: status-bar;
+
+  
+}
+.divCPF button{
+  background: rgb(17, 53, 172);
+  color:#fff;
+  border: unset;
 }
 
 #qtd-cpf {
@@ -36,7 +50,6 @@ body {
   height: 30px;
   margin: 0px 0px 0px 0px;
   text-align: center;
-
 }
 .btnCPF {
   width: 200px;
@@ -53,25 +66,29 @@ body {
 }
 
 .divc {
-  width: 600px;
-  height: 80px;
+  width: 220px;
+  height: 60px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin: 5px 10px 5px 10px;
+  padding: 0px 10px 0px 10px;
+  border: outset;
+  border-color: rgb(226, 230, 236);
+  background-color: #fff;
+
 }
 .divc p {
-  width: 200px;
+  width: auto;
+  height: auto;
   margin: 8px;
-  padding: 10px 0px 10px 0;
+  padding: 0 10px 0 0;
   text-align: center;
-  border: outset;
-  border-color: rgb(18 88 200);
 }
 .divc button {
-  width: 200px;
-  height: 100px;
-
-  border: outset;
-  border-color: rgb(10, 59, 138);
+  width: auto;
+  height: auto;
+  background: transparent;
+  border: unset;
 }
